@@ -5,3 +5,16 @@ Site desenvolvido para avaliação do ProSEmpre 2024.1 da Empresa Júnior da Esc
 
 * Python
 * Django
+
+# Instalação
+### Instalação de Ambiente Virtual
+- Baixe esse repositório e entre no diretório do projeto
+- Utilize um VirtualEnvironment<br>
+`python -m venv venv`
+- Ative o ambiente virtual<br>
+`source venv/bin/activate`
+- Instale as dependências necessárias<br>
+`pip install -r requirements.txt`
+
+### Passos Iniciais para Funcionamento do Projeto
+`python manage.py runserver`
