@@ -11,8 +11,10 @@ Site desenvolvido para avaliação do ProSEmpre 2024.1 da Empresa Júnior da Esc
 - Baixe esse repositório e entre no diretório do projeto
 - Utilize um VirtualEnvironment<br>
 `python -m venv venv`
-- Ative o ambiente virtual<br>
+- Ativando o ambiente virtual no linux<br>
 `source venv/bin/activate`
+- Ativando o ambiente virtual no windows<br>
+`.\venv\Scripts\activate.ps1`
 - Instale as dependências necessárias<br>
 `pip install -r requirements.txt`
 
