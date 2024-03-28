@@ -1,0 +1,283 @@
+[
+  {
+    "model": "curso.curso",
+    "pk": 1,
+    "fields": {
+      "foto": "core/static/img/cursos/a5f7421e0a44f0f8dd9fb64db1aee64d.png",
+      "nome": "Engenharia da computação",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Semipresencial",
+      "carga_horaria": 45,
+      "nota": 4.9,
+      "preco": 8880
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 2,
+    "fields": {
+      "nome": "Enfermagem",
+      "area_conhecimento": "Biociências",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.8,
+      "preco": 10150
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 3,
+    "fields": {
+      "foto": "core/static/img/cursos/e86e97033e55c77a68e9a6ae882dc613.png",
+      "nome": "Design gráfico",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Técnico",
+      "modalidade": "Online",
+      "carga_horaria": 45,
+      "nota": 4.7,
+      "preco": 2440
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 4,
+    "fields": {
+      "foto": "core/static/img/cursos/cb2a36ae1b9e542db7b811af3ef2bba5.png",
+      "nome": "Licenciatura em letras",
+      "area_conhecimento": "Ciências humanas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "carga_horaria": 45,
+      "nota": 4.5,
+      "preco": 4905
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 5,
+    "fields": {
+      "foto": "core/static/img/cursos/730b31e01bc48a0f66121dbc104b3093.png",
+      "nome": "Biblioteconomia",
+      "area_conhecimento": "Ciências humanas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Técnico",
+      "modalidade": "Online",
+      "carga_horaria": 20,
+      "nota": 4.3,
+      "preco": 2925
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 6,
+    "fields": {
+      "foto": "core/static/img/cursos/406c06315ef2704b1ff7190f4486b530.png",
+      "nome": "Turismo",
+      "area_conhecimento": "Ciências humanas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Semipresencial",
+      "carga_horaria": 45,
+      "nota": 4.2,
+      "preco": 2699
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 7,
+    "fields": {
+      "nome": "Engenharia de civil",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.7,
+      "preco": 4905
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 8,
+    "fields": {
+      "foto": "core/static/img/cursos/96a178c2300b5207b881a2d835eec956.png",
+      "nome": "Licenciatura em matemática",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.2,
+      "preco": 2925
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 9,
+    "fields": {
+      "nome": "Engenharia de produção",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Semipresencial",
+      "carga_horaria": 45,
+      "nota": 4.9,
+      "preco": 8880
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 10,
+    "fields": {
+      "foto": "core/static/img/cursos/a2203a823326fc464495853f5ee461e0.png",
+      "nome": "Estatística",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Técnico",
+      "modalidade": "Semipresencial",
+      "carga_horaria": 20,
+      "nota": 3.9,
+      "preco": 2699
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 11,
+    "fields": {
+      "foto": "core/static/img/cursos/46b0b5348690ecb26219f6d843e0413f.png",
+      "nome": "Bacharelado em ciências biológicas",
+      "area_conhecimento": "Ciências biológicas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.7,
+      "preco": 4905
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 12,
+    "fields": {
+      "foto": "core/static/img/cursos/4d284e774ebe25ff93bc0618d6b8a061.png",
+      "nome": "Biomedicina",
+      "area_conhecimento": "Ciências biológicas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.2,
+      "preco": 2925
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 13,
+    "fields": {
+      "foto": "core/static/img/cursos/6e9390271470ea1ae84073229ce01df7.png",
+      "nome": "Ecologia",
+      "area_conhecimento": "Ciências biológicas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Técnico",
+      "modalidade": "Semipresencial",
+      "carga_horaria": 20,
+      "nota": 3.9,
+      "preco": 2699
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 14,
+    "fields": {
+      "foto": "core/static/img/cursos/00d07ddc57eda36afeaf37c50140c17a.png",
+      "nome": "Zootecnia",
+      "area_conhecimento": "Ciências biológicas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Online",
+      "carga_horaria": 45,
+      "nota": 4.1,
+      "preco": 3869
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 15,
+    "fields": {
+      "foto": "core/static/img/cursos/4d284e774ebe25ff93bc0618d6b8a061.png",
+      "nome": "Agronomia",
+      "area_conhecimento": "Ciências biológicas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.7,
+      "preco": 4905
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 16,
+    "fields": {
+      "foto": "core/static/img/cursos/6e9390271470ea1ae84073229ce01df7.png",
+      "nome": "Licenciatura em ciências biológicas",
+      "area_conhecimento": "Ciências biológicas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Semipresencial",
+      "carga_horaria": 45,
+      "nota": 4.2,
+      "preco": 2925
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 17,
+    "fields": {
+      "foto": "core/static/img/cursos/9ae57a843970a2fb027abef6a025391a.png",
+      "nome": "Bachaerlado em física",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Online",
+      "carga_horaria": 45,
+      "nota": 4.1,
+      "preco": 3869
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 18,
+    "fields": {
+      "foto": "core/static/img/cursos/00d07ddc57eda36afeaf37c50140c17a.png",
+      "nome": "Licenciatura em física",
+      "area_conhecimento": "Ciências exatas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Presencial",
+      "carga_horaria": 45,
+      "nota": 4.7,
+      "preco": 4905
+    }
+  },
+  {
+    "model": "curso.curso",
+    "pk": 19,
+    "fields": {
+      "foto": "core/static/img/cursos/3879be0b72634d99d859ed035605edfb.jpeg",
+      "nome": "Licenciatura em história",
+      "area_conhecimento": "Ciências humanas",
+      "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.",
+      "titulacao": "Superior",
+      "modalidade": "Online",
+      "carga_horaria": 45,
+      "nota": 4.7,
+      "preco": 3869
+    }
+  }
+]
