@@ -1,7 +1,7 @@
 from django.db import models
 
 class Curso(models.Model):
-    foto = models.FileField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/cursos')
+    foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/cursos')
     nome = models.CharField(verbose_name='Nome', max_length=150)
     area_conhecimento = models.CharField(verbose_name='Área de Conhecimento', max_length=100)
     descricao = models.TextField(verbose_name='Descrição')
