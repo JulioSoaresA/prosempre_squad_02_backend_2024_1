@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <section class="container text-center mt-2 col-8">
+        <div class="my-2">
+            <h2>Sobre</h2>
+            {% if equipe %}
+                {% for membro in equipe %}
+                    <img src="{{ membro.foto }}">
+                    <p>{{ membro.nome}}</p>
+                    <p>{{ membro.titulo}}</p>
+                    <p>{{ membro.descricao}}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</body>
+
+</html>
