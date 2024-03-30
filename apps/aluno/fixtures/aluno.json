@@ -5,7 +5,7 @@
     "fields": {
       "foto": "core/static/img/alunos/306af3f73eb130a2dcfedb9e7886f996.png",
       "nome": "João Maria",
-      "curso": 13,
+      "curso": 14,
       "ano_ingresso": 2014,
       "ano_conclusao": 2018,
       "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius."
@@ -17,7 +17,7 @@
     "fields": {
       "foto": "core/static/img/alunos/ea1af3035e710370275cb9526b82d2b5.png",
       "nome": "Maria Clara Dias",
-      "curso": 19,
+      "curso": 7,
       "ano_ingresso": 2012,
       "ano_conclusao": 2016,
       "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius."
@@ -29,7 +29,7 @@
     "fields": {
       "foto": "core/static/img/alunos/531392949fec5bfeae32c359ed29bd1d.png",
       "nome": "Annelise de Lima",
-      "curso": 12,
+      "curso": 13,
       "ano_ingresso": 2014,
       "ano_conclusao": 2018,
       "descricao": "Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius."
