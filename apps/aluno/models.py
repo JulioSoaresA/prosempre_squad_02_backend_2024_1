@@ -1,7 +1,7 @@
 from django.db import models
 
 class Aluno(models.Model):
-    foto = models.FileField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/alunos')
+    foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/alunos')
     nome = models.CharField(verbose_name="Nome", max_length=150)
     curso = models.ForeignKey('curso.Curso', on_delete=models.CASCADE, verbose_name="Curso")
     ano_ingresso = models.IntegerField(verbose_name="Ano de Ingresso")
