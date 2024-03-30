@@ -54,7 +54,9 @@
                     <h5 class="card-title">{{ curso.nome }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ curso.titulacao }} - {{ curso.carga_horaria}}h - {{ curso.modalidade }}</h6>
                     <p class="card-text">{{ curso.descricao }}</p>
-                    <p class="card-footer">R${{ curso.preco }}</p>
+                    <p class="card-text">{{ curso.parcela_10x }}</p>
+                    <p class="card-text">{{ curso.parcela_24x }}</p>
+                    <p class="card-footer">{{ curso.preco_formatado }}</p>
                     <a href="" class="btn btn-primary">Ver mais</a>
                 </div>
             </div>
