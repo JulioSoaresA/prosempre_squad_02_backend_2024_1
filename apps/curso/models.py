@@ -34,6 +34,7 @@ class Curso(models.Model):
         return f'24x de R${(preco * 1.12) / 24:.2f}'.replace('.', ',')
 
 class NossaHistoria(models.Model):
+    foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/nossa_historia')
     titulo = models.CharField(verbose_name='Título', max_length=150)
     descricao = models.TextField(verbose_name='Descrição')
     ativo = models.BooleanField(default=True)
@@ -47,6 +48,7 @@ class NossaHistoria(models.Model):
         return self.titulo
 
 class NossosValores(models.Model):
+    foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/nossos_valores')
     titulo = models.CharField(verbose_name='Título', max_length=150)
     descricao = models.TextField(verbose_name='Descrição')
     ativo = models.BooleanField(default=True)
