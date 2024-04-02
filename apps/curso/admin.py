@@ -22,7 +22,7 @@ class NossosValoresAdmin(admin.ModelAdmin):
     list_filter = ('titulo', )
     filter_horizontal = ()
     fieldsets = ()
-
+    
 admin.site.register(Curso, CursosAdmin)
 admin.site.register(NossaHistoria, NossaHistoriaAdmin)
 admin.site.register(NossosValores, NossosValoresAdmin)
