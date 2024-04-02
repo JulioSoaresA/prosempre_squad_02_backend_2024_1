@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'aluno',
     'sobre',
     'contato',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -109,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
+
+DATE_FORMAT = 'd \de F \de Y'
 
 LANGUAGE_CODE = 'pt-br'
 
