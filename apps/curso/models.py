@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import Decimal
 
 class Curso(models.Model):
     foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/cursos')
@@ -21,7 +22,19 @@ class Curso(models.Model):
     def __str__(self):
         return self.nome
 
+    def preco_formatado(self):
+        return f'R${self.preco:.2f}'.replace('.', ',')
+
+    def parcela_10x(self):
+        preco = float(self.preco)
+        return f'10x de R${(preco * 1.10) / 10:.2f}'.replace('.', ',')
+
+    def parcela_24x(self):
+        preco = float(self.preco)
+        return f'24x de R${(preco * 1.12) / 24:.2f}'.replace('.', ',')
+
 class NossaHistoria(models.Model):
+    foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/nossa_historia')
     titulo = models.CharField(verbose_name='Título', max_length=150)
     descricao = models.TextField(verbose_name='Descrição')
     ativo = models.BooleanField(default=True)
@@ -35,6 +48,7 @@ class NossaHistoria(models.Model):
         return self.titulo
 
 class NossosValores(models.Model):
+    foto = models.ImageField('Foto de Exibição', null=True, blank=True, upload_to='core/static/img/nossos_valores')
     titulo = models.CharField(verbose_name='Título', max_length=150)
     descricao = models.TextField(verbose_name='Descrição')
     ativo = models.BooleanField(default=True)

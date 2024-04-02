@@ -1,0 +1,62 @@
+[
+  {
+    "model": "blog.noticia",
+    "pk": 1,
+    "fields": {
+      "foto": "core/static/img/noticias/40797a242f3d24a1bc58268a781a1b51.png",
+      "titulo": "Transforme sua Carreira: Descubra os Cursos Online Mais Procurados do...",
+      "descricao": "Lorem ipsum dolor sit amet. Et voluptatem consectetur ad repudiandae autem et magni officiis aut facere tempore nam eligendi quod ut voluptatem iure ut voluptas eveniet.",
+      "data_publicacao": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.noticia",
+    "pk": 2,
+    "fields": {
+      "foto": "core/static/img/noticias/3beeb26c3c5d3041f3a72d9406fb94c7.png",
+      "titulo": "Transforme sua Carreira: Descubra os Cursos Online Mais Procurados do...",
+      "descricao": "Lorem ipsum dolor sit amet. Et voluptatem consectetur ad repudiandae autem et magni officiis aut facere tempore nam eligendi quod ut voluptatem iure ut voluptas eveniet.’",
+      "data_publicacao": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.noticia",
+    "pk": 3,
+    "fields": {
+      "foto": "core/static/img/noticias/a2d4c6e35270fdee5ae211f587bef4d4.png",
+      "titulo": "Transforme sua Carreira: Descubra os Cursos Online Mais Procurados do...",
+      "descricao": "Lorem ipsum dolor sit amet. Et voluptatem consectetur ad repudiandae autem et magni officiis aut facere tempore nam eligendi quod ut voluptatem iure ut voluptas eveniet.",
+      "data_publicacao": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.noticia",
+    "pk": 4,
+    "fields": {
+      "foto": "core/static/img/noticias/03949e0236cbd5a51f9360c3ed96882a.png",
+      "titulo": "Transforme sua Carreira: Descubra os Cursos Online Mais Procurados do...",
+      "descricao": "Lorem ipsum dolor sit amet. Et voluptatem consectetur ad repudiandae autem et magni officiis aut facere tempore nam eligendi quod ut voluptatem iure ut voluptas eveniet.",
+      "data_publicacao": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.noticia",
+    "pk": 5,
+    "fields": {
+      "foto": "core/static/img/noticias/8aab429fbc8a475a5476cee488146744.png",
+      "titulo": "Transforme sua Carreira: Descubra os Cursos Online Mais Procurados do...",
+      "descricao": "Lorem ipsum dolor sit amet. Et voluptatem consectetur ad repudiandae autem et magni officiis aut facere tempore nam eligendi quod ut voluptatem iure ut voluptas eveniet.",
+      "data_publicacao": "2023-10-10"
+    }
+  },
+  {
+    "model": "blog.noticia",
+    "pk": 6,
+    "fields": {
+      "foto": "core/static/img/noticias/a932965e17d313acaad6976d13c661e4.png",
+      "titulo": "Transforme sua Carreira: Descubra os Cursos Online Mais Procurados do...",
+      "descricao": "Lorem ipsum dolor sit amet. Et voluptatem consectetur ad repudiandae autem et magni officiis aut facere tempore nam eligendi quod ut voluptatem iure ut voluptas eveniet.",
+      "data_publicacao": "2023-10-10"
+    }
+  }
+]
