@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <section>
+        <h1>Contato</h1>
+        <form action="{% url 'contato' %}" method="POST">
+            {% csrf_token%}
+            Assunto<input name="assunto" type="text">
+            Nome<input name="nome" type="text">
+            Email<input name="email" type="email">
+            Mensagem<input name="mensagem" type="text">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+
+</html>
