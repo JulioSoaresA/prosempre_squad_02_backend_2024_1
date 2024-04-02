@@ -54,7 +54,9 @@
                     <h5 class="card-title">{{ curso.nome }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ curso.titulacao }} - {{ curso.carga_horaria}}h - {{ curso.modalidade }}</h6>
                     <p class="card-text">{{ curso.descricao }}</p>
-                    <p class="card-footer">R${{ curso.preco }}</p>
+                    <p class="card-text">{{ curso.parcela_10x }}</p>
+                    <p class="card-text">{{ curso.parcela_24x }}</p>
+                    <p class="card-footer">{{ curso.preco_formatado }}</p>
                     <a href="" class="btn btn-primary">Ver mais</a>
                 </div>
             </div>
@@ -86,24 +88,29 @@
     </div>
     </div>
 </section>
-
+{% if nossa_historia %}
 <section class="container text-center mt-2 col-8">
     <div class="my-2"><h2>{{ nossa_historia.titulo }}</h2></div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-6">
+            <img class="card-img-top" src="{{ nossa_historia.foto.url }}" width="100" height="250">
             <p>{{ nossa_historia.descricao }}</p>
         </div>
     </div>
 </section>
-
+{% endif %}
+<br>
+{% if nossos_valores %}
 <section class="container text-center mt-2 col-8">
     <div class="my-2"><h2>{{ nossos_valores.titulo }}</h2></div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-6">
+            <img class="card-img-top" src="{{ nossos_valores.foto.url }}" width="100" height="250">
             <p>{{ nossos_valores.descricao }}</p>
         </div>
     </div>
 </section>
+{% endif %}
 {% endblock %}
 
 </body>
