@@ -6,8 +6,6 @@ class Equipe(models.Model):
     titulo = models.TextField(verbose_name="Título", max_length=255)
     nome = models.CharField(verbose_name="Nome", max_length=150)
 
-
-
     class Meta:
         verbose_name = "Equipe"
         db_table = 'equipe'
