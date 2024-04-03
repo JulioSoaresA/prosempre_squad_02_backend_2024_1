@@ -4,6 +4,23 @@
 
 {% include 'partials/_menu.html' %}
 
+
+<div class="search">
+    <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form action="{% url 'buscar_curso' %}">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="buscar" placeholder="Buscar curso">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="container text-center mt-2 col-8">
 <div class="my-2"><h2>Cursos mais populares</h2></div>
 <div class="row">
