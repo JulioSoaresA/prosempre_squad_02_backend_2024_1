@@ -10,7 +10,13 @@
         <h1>Contato</h1>
         <form action="{% url 'contato' %}" method="POST">
             {% csrf_token%}
-            Assunto<input name="assunto" type="text">
+            <label>Assunto:</label>
+            <select id="assunto" name="assunto">
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+                <option value="opcao3">Opção 3</option>
+                <option value="opcao4">Opção 4</option>
+              </select>
             Nome<input name="nome" type="text">
             Email<input name="email" type="email">
             Mensagem<input name="mensagem" type="text">
