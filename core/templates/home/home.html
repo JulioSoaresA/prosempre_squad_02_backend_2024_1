@@ -1,6 +1,16 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/home/home.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <script src="../../static/js/home/home.js" defer></script>
+    <title>Home</title>
+</head>
+
+<body>
     {% include 'partials/_navbar.html' %}
     <div class="geral">
         <div class="firstsectionMobile">
@@ -181,4 +191,5 @@
             </div>
         </div>
         {% include 'partials/_footer.html' %}
-{% endblock %}
+</body>
+</html>
