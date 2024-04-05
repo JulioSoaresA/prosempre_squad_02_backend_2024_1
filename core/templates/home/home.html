@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mani</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/css/home/home.css">
     <link rel="stylesheet" href="../../static/css/footer.css">
     <script src="../../static/js/home/home.js" defer></script>
+    <title>Mani</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                 <label class="descricao1">Bem vindo a educação <span class="sublinhado" id="sublinhadooff">Mani</span> de <span class="trocacor">qualidade</span></label>
                 <label class="descricao2">Com a Mani cursos você pode ficar tranquilo, seu futuro está em boas mãos.</label>
                 <div class="explorarCursos">
-                    <button class="btnExplorarCursos"><div class="arrowbtn"><label class="arrow">&rarr;</label></div>EXPLORAR CURSOS</button>
+                    <a class="btnExplorarCursos" href="{% url 'cursos' %}"><div class="arrowbtn"><label class="arrow">&rarr;</label></div>EXPLORAR CURSOS</a>
                     <div class="miniaturaAlunos">
                         <div class="imgAlunos">
                             <img src="../../static/img/home/botaoexplorarcursos/minialuno1.png" class="miniaturaAluno">

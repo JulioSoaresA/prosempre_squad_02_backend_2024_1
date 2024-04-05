@@ -26,15 +26,13 @@
 
     <div class="topicos">
         <div class="imgtopicos">
-            <img class="ftopicos" src="../../static/img/sobre/Foto01.png" alt="Mulheres rindo sentadas ao redor da mesa">
+            <img class="ftopicos" src="{{ nossa_historia.foto.url }}" alt="Mulheres rindo sentadas ao redor da mesa">
         </div>
         <div class="txttopicos">
             <h1 class="tittopicos">Nossa <span class="destacada">História</span></h1>
 
-            <p class="stittopicos">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore 
-            magna aliqua. Duis aute irure dolor in reprehenderit in 
-            voluptate velit esse cillum dolore.
+            <p class="stittopicos">
+                {{ nossa_historia.descricao }}
             </p>
         </div>
     </div>
@@ -42,14 +40,12 @@
         <div class="txttopicos">
             <h1 class="tittopicos">Nossos <span class="destacada">Valores</span></h1>
 
-            <p class="stittopicos">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore 
-            magna aliqua. Duis aute irure dolor in reprehenderit in 
-            voluptate velit esse cillum dolore.
+            <p class="stittopicos">
+                {{ nossos_valores.descricao }}
             </p>
         </div>
         <div class="imgtopicos">
-            <img class="ftopicos" src="../../static/img/sobre/Foto02.png" alt="Pessoas conversando ao redor de uma mesa">
+            <img class="ftopicos" src="{{ nossos_valores.foto.url }}" alt="Pessoas conversando ao redor de uma mesa">
         </div>
     </div>
 
@@ -77,50 +73,53 @@
             tempus tellus. Quisque quis felis in felis posuere interdum.</p>
         </div>
         <div class="professores">
+            {% if equipe %}
+            {% for membro in equipe %}
             <div class="membro">
                 <div class="imgperfil">
-                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor01.png); background-position: center calc(70%);"></div>
+                    <div class="perfil" style="background-image: url({{ membro.foto.url }}); background-position: center calc(40%);"></div>
                 </div>
                 <div class="textos">
-                    <h3 class="nome">Giovane Amorim</h3>
-                    <p class="formacao">MESTRE EM BIOLOGIA MOLECULAR</p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. </p>
+                    <h3 class="nome">{{ membro.nome }}</h3>
+                    <p class="formacao">{{ membro.titulo }}</p>
+                    <p class="descricao">{{ membro.descricao }}</p>
                 </div>
             </div>
-            <div class="membro">
-                <div class="imgperfil">
-                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor02.png); background-position: center calc(30%);"></div>
-                </div>
-                <div class="textos">
-                    <h3 class="nome">Cristina Siqueira</h3>
-                    <p class="formacao">DOUTORA EM CONSTRUÇÕES SUSTENTÁVEIS</p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. </p>
-                </div>
-            </div>
-            <div class="membro">
-                <div class="imgperfil">
-                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor03.png); background-position: center calc(15%); width: 150%;"></div>
-                </div>
-                <div class="textos">
-                    <h3 class="nome">Juliano Cavalanti</h3>
-                    <p class="formacao">DOUTOR EM FARMACOLOGIA MÉDICA</p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. </p>
-                </div>
-            </div>
-            <div class="membro">
-                <div class="imgperfil">
-                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor04.png); background-position: center calc(45%); width: 150%;"></div>
-                </div>
-                <div class="textos">
-                    <h3 class="nome">Kiara Xiao</h3>
-                    <p class="formacao">MESTRE EM BIOFÍSICA</p>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. </p>
-                </div>
-            </div>
+            {% endfor %}
+            {% endif %}
+<!--            <div class="membro">-->
+<!--                <div class="imgperfil">-->
+<!--                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor02.png); background-position: center calc(30%);"></div>-->
+<!--                </div>-->
+<!--                <div class="textos">-->
+<!--                    <h3 class="nome">Cristina Siqueira</h3>-->
+<!--                    <p class="formacao">DOUTORA EM CONSTRUÇÕES SUSTENTÁVEIS</p>-->
+<!--                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur-->
+<!--                    adipiscing elit. </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="membro">-->
+<!--                <div class="imgperfil">-->
+<!--                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor03.png); background-position: center calc(15%); width: 150%;"></div>-->
+<!--                </div>-->
+<!--                <div class="textos">-->
+<!--                    <h3 class="nome">Juliano Cavalanti</h3>-->
+<!--                    <p class="formacao">DOUTOR EM FARMACOLOGIA MÉDICA</p>-->
+<!--                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur-->
+<!--                    adipiscing elit. </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="membro">-->
+<!--                <div class="imgperfil">-->
+<!--                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor04.png); background-position: center calc(45%); width: 150%;"></div>-->
+<!--                </div>-->
+<!--                <div class="textos">-->
+<!--                    <h3 class="nome">Kiara Xiao</h3>-->
+<!--                    <p class="formacao">MESTRE EM BIOFÍSICA</p>-->
+<!--                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur-->
+<!--                    adipiscing elit. </p>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
 
