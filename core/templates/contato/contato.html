@@ -27,15 +27,14 @@
             <p class="descricao">Lorem ipsum dolor sit amet. Rem itaque sequi et commodi illo et autem beatae sit quis cumque quo fugiat veniam.</p>
             <form class="formulario" action="{% url 'contato' %}" method="POST">
                 {% csrf_token%}
-                {{ form.as_p }}
-<!--                <select name="escolha" class="assuntoBox">-->
-<!--                    <option value="opcao1">Assunto</option>-->
-<!--                    <option value="opcao2">Opção 2</option>-->
-<!--                    <option value="opcao3">Opção 3</option>-->
-<!--                  </select>-->
-<!--                  <input type="text" class="miniinput" placeholder="Nome" id="inputNome"><input type="text" class="miniinput" placeholder="Email">-->
-<!--                  <input type="text" class="biginput" placeholder="Mensagem">-->
-                  <button class="enviarBtn" type="submit">Enviar</button>
+                <select name="assunto" class="assuntoBox">
+                    {% for value, label in form.assunto.field.choices %}}
+                        <option value="{{ value }}">{{ label }}</option>
+                     {% endfor %}
+                </select>
+                <input type="text" class="miniinput" placeholder="Nome" id="inputNome" name="nome"><input type="text" class="miniinput" placeholder="Email" name="email">
+                <input type="text" class="biginput" placeholder="Mensagem" name="mensagem">
+                <button class="enviarBtn" type="submit">Enviar</button>
             </form>
         </div>
         <div class="rightside">
