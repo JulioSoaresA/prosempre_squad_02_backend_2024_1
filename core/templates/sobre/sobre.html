@@ -1,39 +1,174 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/sobre/sobre.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <title>Sobre</title>
+</head>
+<body>
 
-{% include 'partials/_menu.html' %}
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../../static/img/sobre/logo01.png" alt="Logo Mani Cursos">
+        </div>
+        <div class="separator"></div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+            <li><a href="{% url 'cursos' %}">CURSOS</a></li>
+            <li><a href="{% url 'blog' %}">BLOG</a></li>
+            <li><a href="{% url 'contato' %}">CONTATO</a></li>
+        </ul>
+    </nav>
 
-<section class="container text-center mt-2 col-8">
-    <div class="my-2">
-        <h2>Sobre</h2>
-        <h2>{{ nossa_historia.titulo}}</h2>
-        <p>{{ nossa_historia.descricao}}</p>
-    </div>
-    <div class="my-2">
-        <h2>{{ nossos_valores.titulo}}</h2>
-        <p>{{ nossos_valores.descricao}}</p>
-    </div>
-</section>
-<section class="container text-center mt-2 col-8">
-    <div class="my-2"><h2>Nossa equipe</h2></div>
-    <div class="row">
-        <div class="card-group d-flex justify-content-center">
-            {% if equipe %}
-            {% for membro in equipe %}
-            <div class="col-3">
-                <div class="card mb-3" style="max-width: 24rem;" >
-                    <img class="card-img-top" src="{{ membro.foto.url }}" width="100" height="250">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ membro.nome }}</h5>
-                        <p class="card-text">{{ membro.titulo }}</p>
-                        <p class="card-text">{{ membro.descricao }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            {% endif %}
+    <div class="topicos">
+        <div class="imgtopicos">
+            <img class="ftopicos" src="../../static/img/sobre/Foto01.png" alt="Mulheres rindo sentadas ao redor da mesa">
+        </div>
+        <div class="txttopicos">
+            <h1 class="tittopicos">Nossa <span class="destacada">História</span></h1>
+
+            <p class="stittopicos">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore 
+            magna aliqua. Duis aute irure dolor in reprehenderit in 
+            voluptate velit esse cillum dolore.
+            </p>
         </div>
     </div>
-</section>
-{% endblock %}
+    <div class="topicos">
+        <div class="txttopicos">
+            <h1 class="tittopicos">Nossos <span class="destacada">Valores</span></h1>
+
+            <p class="stittopicos">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore 
+            magna aliqua. Duis aute irure dolor in reprehenderit in 
+            voluptate velit esse cillum dolore.
+            </p>
+        </div>
+        <div class="imgtopicos">
+            <img class="ftopicos" src="../../static/img/sobre/Foto02.png" alt="Pessoas conversando ao redor de uma mesa">
+        </div>
+    </div>
+
+    <div id="principal">
+        <div id="tprincipal">
+            <h1 id="txtprincipal"><span class="destacada">Os melhores</span> professores do mercado </h1>
+        </div>
+        <div id="stprincipal">  
+            <p id="stxtprincipal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sapien, est felis, sagittis viverra nulla mattis scelerisque. Eget 
+            cras integer.</p>
+        </div>
+        <a href="#equipe"><button class="btnNossaEquipe" type="button" href="#equipe">NOSSA EQUIPE
+            <div class="arrowbtn">
+                <label class="arrow">&rarr;</label>
+            </div>
+        </button></a>
+    </div>
+
+    <div class="equipe" id="equipe">
+        <div class="titulo">
+            <h2>Nossa Equipe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Suspendisse sed scelerisque elit. Sed eget tincidunt augue, nec 
+            tempus tellus. Quisque quis felis in felis posuere interdum.</p>
+        </div>
+        <div class="professores">
+            <div class="membro">
+                <div class="imgperfil">
+                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor01.png); background-position: center calc(70%);"></div>
+                </div>
+                <div class="textos">
+                    <h3 class="nome">Giovane Amorim</h3>
+                    <p class="formacao">MESTRE EM BIOLOGIA MOLECULAR</p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. </p>
+                </div>
+            </div>
+            <div class="membro">
+                <div class="imgperfil">
+                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor02.png); background-position: center calc(30%);"></div>
+                </div>
+                <div class="textos">
+                    <h3 class="nome">Cristina Siqueira</h3>
+                    <p class="formacao">DOUTORA EM CONSTRUÇÕES SUSTENTÁVEIS</p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. </p>
+                </div>
+            </div>
+            <div class="membro">
+                <div class="imgperfil">
+                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor03.png); background-position: center calc(15%); width: 150%;"></div>
+                </div>
+                <div class="textos">
+                    <h3 class="nome">Juliano Cavalanti</h3>
+                    <p class="formacao">DOUTOR EM FARMACOLOGIA MÉDICA</p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. </p>
+                </div>
+            </div>
+            <div class="membro">
+                <div class="imgperfil">
+                    <div class="perfil" style="background-image: url(../../static/img/sobre/professor04.png); background-position: center calc(45%); width: 150%;"></div>
+                </div>
+                <div class="textos">
+                    <h3 class="nome">Kiara Xiao</h3>
+                    <p class="formacao">MESTRE EM BIOFÍSICA</p>
+                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footerLogo">
+            <img src="../../static/img/sobre/logo01.png" alt="Logo Mani Cursos">
+        </div>
+        <div class="blocoFooter">
+            <div class="footer_contatos">
+                <ul>
+                    <li class="primeiro"><h3>Entre em contato</h3></li>
+                    <li>contato@manicursos.com.br</li>
+                    <li>+1-2345-6789</li>
+                    <li>23 Cornelia St, NY 10014, EUA</li>
+                    <li>
+                        <div class="redesSociais">
+                            <img src="../../static/img/sobre/Facebook.png" alt="facebook">
+                            <img src="../../static/img/sobre/Linkedin.png" alt="linkedin">
+                            <img src="../../static/img/sobre/Twitter.png" alt="twitter">
+                            <img src="../../static/img/sobre/Instagram.png" alt="instagram">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="FAQ">
+                <ul>
+                    <li class="primeiro"><h3>FAQ</h3></li>
+                    <li>Auctor volutpat.</li>
+                    <li>Fermentum turpis.</li>
+                    <li>Mi consequat.</li>
+                    <li>Amet venenatis.</li>
+                    <li>Convallis porttitor.</li>
+                </ul>
+            </div>
+            <div class="centralAjuda">
+                <ul>
+                    <li class="primeiro"><h3>Central de Ajuda</h3></li>
+                    <li>Egestas vitae.</li>
+                    <li>Viverra lorem ac.</li>
+                    <li>Eget ac tellus.</li>
+                    <li>Erat nulla.</li>
+                    <li>Vulputate proin.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright"> 
+            Copyright © 2023. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
