@@ -554,7 +554,6 @@ header{
     width: 350px;
     height: 450px;
     border-radius: 35px;
-    background-image: url(../../img/home/quemjafoialunoaprova/aluno1.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1141,7 +1140,7 @@ header{
         height: 189px;
     }
 
-    #aluno2{
+    #aluno{
         display: flex;
         justify-content: end;
 

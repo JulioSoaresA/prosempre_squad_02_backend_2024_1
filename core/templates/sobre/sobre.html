@@ -1,6 +1,16 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/sobre/sobre.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <script src="../../static/js/home/home.js" defer></script>
+    <title>Sobre</title>
+</head>
+<body>
     {% include 'partials/_navbar.html' %}
     <div class="topicos">
         <div class="imgtopicos">
@@ -67,4 +77,5 @@
         </div>
     </div>
     {% include 'partials/_footer.html' %}</body>
-{% endblock %}
+</body>
+</html>

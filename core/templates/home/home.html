@@ -54,79 +54,40 @@
                 <img src="../../static/img/home/icones/bolapontinhos.png" class="bolaPontinhos">
             </div>
             <!--Cursos mais populares-->
+            {% if cursos %}
             <div class="cursosPopulares">
                 <label class="cabeçalho">Cursos mais <span class="sublinhado" id="cabeçalho">populares</span></label>
                 <div class="cards">
+                    {% for curso in cursos %}
                     <!--Card Engenharia da Computação-->
                     <div class="cardCurso">
                         <button class="setaCarrosselMobile" id="setaCarrosselMobileEsquerda">&lt;</button>
                         <div class="cardupper">
-                            <img src="../../static/img/home/cursosmaispopulares/engenhariaComp.png" class="cursosImg">
+                            <img src="{{ curso.foto.url }}" class="cursosImg">
                         </div>
                         <div class="cardlower">
                             <div class="dadosgerais">
-                                <label class="cursoName">Engenharia da Comp...</label>
+                                <label class="cursoName">{{ curso.nome }}</label>
                                 <img src="../../static/img/home/icones/estrela.png" class="estrelaImg">
-                                <label class="notaAvaliação">(4.7)</label>
+                                <label class="notaAvaliação">({{ curso.nota }})</label>
                             </div>
-                            <label class="dadosCargaHoraria">Superior - 45h semanais - Semipresencial</label>
-                            <p class="descricaoCurso">Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.</p>
+                            <label class="dadosCargaHoraria">{{ curso.titulacao }} - {{ curso.carga_horaria }}h semanais -
+                                {{ curso.modalidade }}</label>
+                            <p class="descricaoCurso">{{ curso.descricao }}</p>
                             <div class="verMais">
                                 <div class="preco">
-                                    <label class="parcelado">24x de R$ 410,90</label>
-                                    <label class="avista">ou R$ 8,880 à vista</label>
+                                    <label class="parcelado">{{ curso.parcela_24x }}</label>
+                                    <label class="avista">ou {{ curso.preco_formatado }} à vista</label>
                                 </div>
                                 <button class="verMaisBtn">Ver Mais</button>
                             </div>
                         </div>
                         <button class="setaCarrosselMobile" id="setaCarrosselMobileDireita">&gt;</button>
                     </div>
-                    <!--Card Enfermagem-->
-                    <div class="cardCurso" id="mobileNone">
-                        <div class="cardupper">
-                            <img src="../../static/img/home/cursosmaispopulares/enfermagem.png" class="cursosImg">
-                        </div>
-                        <div class="cardlower">
-                            <div class="dadosgerais">
-                                <label class="cursoName">Enfermagem</label>
-                                <img src="../../static/img/home/icones/estrela.png" class="estrelaImg">
-                                <label class="notaAvaliação">(4.4)</label>
-                            </div>
-                            <label class="dadosCargaHoraria">Superior - 45h semanais - Presencial</label>
-                            <p class="descricaoCurso">Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.</p>
-                            <div class="verMais">
-                                <div class="preco">
-                                    <label class="parcelado">24x de R$ 469,90</label>
-                                    <label class="avista">ou R$ 10,150 à vista</label>
-                                </div>
-                                <button class="verMaisBtn">Ver Mais</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Card Design Gráfico-->
-                    <div class="cardCurso" id="mobileNone">
-                        <div class="cardupper">
-                            <img src="../../static/img/home/cursosmaispopulares/designgrafico.png" class="cursosImg">
-                        </div>
-                        <div class="cardlower">
-                            <div class="dadosgerais">
-                                <label class="cursoName">Design Gráfico</label>
-                                <img src="../../static/img/home/icones/estrela.png" class="estrelaImg">
-                                <label class="notaAvaliação">(4.6)</label>
-                            </div>
-                            <label class="dadosCargaHoraria">Técnico - 30h semanais - Online</label>
-                            <p class="descricaoCurso">Lorem ipsum dolor sit amet consectetur. Montes ut nascetur arcu in nisi turpis. Ut tempor egestas ornare donec sed. Volutpat nunc diam varius.</p>
-                            <div class="verMais">
-                                <div class="preco">
-                                    <label class="parcelado">24x de R$ 112,90</label>
-                                    <label class="avista">ou R$ 2,440 à vista</label>
-                                </div>
-                                <button class="verMaisBtn">Ver Mais</button>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+            {% endif %}
         </div>
         
             <!--Nossa História-->
@@ -141,54 +102,35 @@
                         <span class="bolaH"></span>
                     </div>
                 </div>
+                {% if nossa_historia %}
                   <div class="nossaHistoriaTexto">
                       <label class="cabeçalho" id="cabeçalhoNossaHistoriaMobile">Nossa <span class="sublinhado" id="cabeçalho">história</span></label>
-                      <p class="nossaHistoriaDescricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                      <p class="nossaHistoriaDescricao">{{ nossa_historia.descricao }}</p>
                   </div>
+                {% endif %}
               </div>
+
             <!--Quem já foi aluno aprova-->
+            {% if alunos %}
             <div class="quemFoiAlunoAprovaSection">
                 <label class="cabeçalho" id="cabeçalhoQuemfoiAluno">Quem já foi aluno <span class="trocacor" id="spanQuemfoiAlunoaprova">aprova!</span></label>
                 <div class="alunosCardsRow">
                     <button class="setaCarrosselMobile" id="setaCarrosselMobileEsquerda2">&lt;</button>
-                    <div class="cardAluno">
+                    {% for aluno in alunos %}
+                    <div class="cardAluno" id="aluno" style="background-image: url({{ aluno.foto.url }});">
                         <div class="dadosPessoais">
-                            <label class="nomeAluno">Maria Luiza Queiroz</label>
-                            <label class="cursoAno">Designer Gráfica (2020 - 2024)</label>
-                            <label class="descricaoAluno">“Lorem ipsum dolor sit amet consectetur. Id nunc ultrices eget risus at accumsan. Urna.”</label>
+                            <label class="nomeAluno">{{ aluno.nome }}</label>
+                            <label class="cursoAno">{{ aluno.curso }} ({{ aluno.ano_ingresso }} - {{ aluno.ano_conclusao }})</label>
+                            <label class="descricaoAluno">“{{ aluno.descricao }}”</label>
                         </div>
                     </div>
-                    <div class="cardAluno" id="aluno2">
-                        <div class="dadosPessoais">
-                            <label class="nomeAluno">Matheus Figueira</label>
-                            <label class="cursoAno">Engenheiro da Computação (2015 - 2020)</label>
-                            <label class="descricaoAluno">“Lorem ipsum dolor sit amet consectetur. Id nunc ultrices eget risus at accumsan. Urna.”</label>
-                        </div>
-                    </div>
-                    <div class="cardAluno" id="aluno3">
-                        <div class="dadosPessoais">
-                            <label class="nomeAluno">Annelise de Lima</label>
-                            <label class="cursoAno">Biomédica (2014 - 2018)</label>
-                            <label class="descricaoAluno">“Lorem ipsum dolor sit amet consectetur. Id nunc ultrices eget risus at accumsan. Urna.”</label>
-                        </div>
-                    </div>
-                    <button class="setaCarrosselMobile" id="setaCarrosselMobileDireita2">&gt;</button>
-                    <div class="cardAluno" id="aluno4">
-                        <div class="dadosPessoais">
-                            <label class="nomeAluno">Maria Clara Dias</label>
-                            <label class="cursoAno">Bacharel em História (2012 - 2016)</label>
-                            <label class="descricaoAluno">“Lorem ipsum dolor sit amet consectetur. Id nunc ultrices eget risus at accumsan. Urna.”</label>
-                        </div>
-                    </div>
-                    <div class="cardAluno" id="aluno5">
-                        <div class="dadosPessoais">
-                            <label class="nomeAluno">João Maria</label>
-                            <label class="cursoAno">Bacharel em Ecologia (2014 - 2018)</label>
-                            <label class="descricaoAluno">“Lorem ipsum dolor sit amet consectetur. Id nunc ultrices eget risus at accumsan. Urna.”</label>
-                        </div>
-                    </div>
+                    {% if forloop.counter == 2 %}
+                        <button class="setaCarrosselMobile" id="setaCarrosselMobileDireita2">&gt;</button>
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
+            {% endif %}
         </div>
         {% include 'partials/_footer.html' %}
 </body>
