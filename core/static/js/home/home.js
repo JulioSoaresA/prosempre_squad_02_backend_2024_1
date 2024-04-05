@@ -36,3 +36,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
   showSlide(currentIndex);    
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector('.cards');
+  const cardWidth = 415; // Largura de cada cartão;
+  let scrollAmount = 0; // Quantidade de rolagem atual
+
+    document.getElementById('setaCarrosselEsquerda').addEventListener('click', () => {
+        // Calcula a nova quantidade de rolagem
+        scrollAmount = Math.max(scrollAmount - cardWidth, 0);
+        container.scrollLeft = scrollAmount;
+    });
+
+    document.getElementById('setaCarrosselDireita').addEventListener('click', () => {
+        // Calcula a nova quantidade de rolagem
+        scrollAmount = Math.min(scrollAmount + cardWidth, container.scrollWidth - container.clientWidth);
+        container.scrollLeft = scrollAmount;
+    });
+});

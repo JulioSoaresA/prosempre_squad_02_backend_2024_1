@@ -320,12 +320,33 @@ header{
     letter-spacing: 2px;
 }
 
+.setaCarrossel {
+    background: transparent; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+#setaCarrosselEsquerda {
+    position: absolute;
+    left: 10px; /* Posiciona à esquerda */
+    transform: translateY(-50%); /* Ajusta a centralização vertical */
+}
+
+#setaCarrosselDireita {
+    position: absolute;
+    left: 30px; /* Posiciona à direita */
+    transform: translateY(-50%); /* Ajusta a centralização vertical */
+}
+
 .cards{
     padding-top: 75px;
     display: flex;
+    overflow: hidden;
 }
 
 .cardCurso{
+    flex: 0 0 20%;
     width: 352px;
     height: 486px;
     margin-left: 73px;
@@ -547,7 +568,7 @@ header{
 .alunosCardsRow{
     margin-top: 60px;
     display: flex;
-    margin-left: -152px;
+    position: relative;
 }
 
 .cardAluno{
@@ -558,24 +579,8 @@ header{
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 16px;
-}
-
-#aluno2{
-    background-image: url(../../img/home/quemjafoialunoaprova/aluno2.png);
-}
-
-#aluno3{
-    background-image: url(../../img/home/quemjafoialunoaprova/aluno3.png);
-}
-
-#aluno4{
-    background-image: url(../../img/home/quemjafoialunoaprova/aluno4.png);
-}
-
-#aluno5{
-    background-image: url(../../img/home/quemjafoialunoaprova/aluno5.png);
 }
 
 .dadosPessoais{
