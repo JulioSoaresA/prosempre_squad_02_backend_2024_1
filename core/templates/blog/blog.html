@@ -1,53 +1,66 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/blog/blog.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Blog</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    {% include 'partials/_navbar.html' %}
+    <!-- FIM DO NAVBAR -->
+<!-- CABEÇALHO E CAMPO DE BUSCA -->
 
-{% include 'partials/_menu.html' %}
+    <div class="cabecalho_">
+        <h1>Últimas Notícias</h1>
+        <p>{{ noticias.first.titulo }}</p>
+    </div>
 
-<section class="container text-center mt-2 col-8">
-    <div class="my-2"><h2>Últimas Notícias</h2></div>
-    <div class="my-2"><h2>{{ noticias.first.titulo }}</h2></div>
-</section>
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<div class="search">
-    <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <form action="{% url 'buscar_noticia' %}">
+        <div class="campoDeBusca">
+            <input type="text" placeholder="Buscar" name="buscar">
+            <img src="../../static/img/blog/Icons/Lupa.png" alt="" >
+            <button type="submit"></button>
+        </div>
+    </form>
+
+<!-- POSTS -->
+    {% if noticias %}
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mx-auto">
-                <form action="{% url 'buscar_noticia' %}">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="buscar" placeholder="Buscar curso">
-                        <button type="submit" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="container text-center mt-2 col-8">
-    <div class="row">
-        <div class="card-group d-flex justify-content-center">
-            {% if noticias %}
             {% for noticia in noticias %}
-            <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 24rem;" >
-                    <img class="card-img-top" src="{{ noticia.foto.url }}" width="100" height="250">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ noticia.titulo }}</h5>
-                        <p class="card-text">{{ noticia.descricao }}</p>
-                        <p class="card-footer">{{ noticia.data_publicacao|date }}</p>
-                        <a href="" class="btn btn-primary">Ver mais</a>
+            <div class="col-lg-6 col-12 custom-col">
+                <div class="upper">
+                    <img src="{{ noticia.foto.url }}" alt="Imagem Post1">
+                </div>
+                <div class="lower">
+                    <h3 id="titulo">{{ noticia.titulo }}</h3>
+                    <p>{{ noticia.descricao }}</p>
+                    <div class="rodapePost">
+                        <div class="rodapeLeft">
+                            <img src="../../static/img/blog/Icons/Coração.png" alt="imagem Coração">
+                            <p>{{ noticia.data_publicacao|date }}</p>
+                        </div>
+                        <a href="#">Ler mais</a>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            {% endif %}
         </div>
     </div>
-</section>
-{% endblock %}
+    {% endif %}
+<!-- <script src="../../static/js/blog/CortaTexto.js"></script> -->
+    <div class="container">
+        <button class="btnCarregarMais">Carregar Mais</button>
+    </div>
+
+<!-- FOOTER -->
+{% include 'partials/_footer.html' %}
+<!-- FIM FOOTER -->
+</body>
+</html>

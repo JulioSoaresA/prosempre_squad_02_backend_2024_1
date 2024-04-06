@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.navbar {
+.navbar_ {
     display: flex;
     align-items: center;
     background-color: white;
@@ -9,17 +9,17 @@
     overflow-x: auto;
 }
 
-.logo img {
+.logo_ img {
     height: 150px;
 }
 
-.separator {
+.separator_ {
     height: 40px;
     border-right: 3px solid #262626;
     margin-right: 20px;
 }
 
-.nav-links {
+.nav-links_ {
     font-family: 'Montserrat';
     font-size: 16px;
     font-weight: 400;
@@ -32,20 +32,20 @@
     display: flex;
 }
 
-.nav-links li {
+.nav-links_ li {
     margin-right: 20px;
 }
 
-.nav-links li:last-child {
+.nav-links_ li:last-child {
     margin-right: 0;
 }
 
-.nav-links li a {
+.nav-links_ li a {
     color: #262626;
     text-decoration: none;
 }
 @media screen and (max-width: 500px) {
-    .navbar{
+    .navbar_{
         flex-wrap: nowrap;
     }
 }
