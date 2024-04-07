@@ -12,3 +12,7 @@ def buscar_noticia(request):
     else:
         noticias = Noticia.objects.order_by('-data_publicacao')
     return render(request, 'blog/blog.html', locals())
+
+def blog_individual(request, blog_id):
+    noticia = Noticia.objects.filter(id=blog_id)
+    return render(request, 'blog/blog_individual.html', locals())
