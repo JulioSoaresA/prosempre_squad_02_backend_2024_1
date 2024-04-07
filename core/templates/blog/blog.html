@@ -8,7 +8,7 @@
     <div class="my-2"><h2>Últimas Notícias</h2></div>
     <div class="my-2"><h2>{{ noticias.first.titulo }}</h2></div>
 </section>
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <div class="search">
     <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
     <div class="container">
@@ -38,12 +38,13 @@
                 <div class="card mb-3" style="max-width: 24rem;" >
                     <img class="card-img-top" src="{{ noticia.foto.url }}" width="100" height="250">
                     <div class="card-body">
+                        <p class="card-text">{{ noticia.id }}</p>
                         <h5 class="card-title">{{ noticia.titulo }}</h5>
                         <p class="card-text">{{ noticia.descricao }}</p>
                         <p class="card-footer">{{ noticia.data_publicacao|date }}</p>
                         <a href="" class="btn btn-primary">Ver mais</a>
                     </div>
-                </div>
+                </div>  
             </div>
             {% endfor %}
             {% endif %}
