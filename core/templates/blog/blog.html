@@ -11,11 +11,9 @@
     <title>Blog</title>
 </head>
 <body>
-    <!-- NAVBAR -->
     {% include 'partials/_navbar.html' %}
-    <!-- FIM DO NAVBAR -->
-<!-- CABEÇALHO E CAMPO DE BUSCA -->
 
+<!-- CABEÇALHO E CAMPO DE BUSCA -->
     <div class="cabecalho_">
         <h1>Últimas Notícias</h1>
         <p>{{ noticias.first.titulo }}</p>
@@ -40,13 +38,13 @@
                 </div>
                 <div class="lower">
                     <h3 id="titulo">{{ noticia.titulo }}</h3>
-                    <p>{{ noticia.descricao }}</p>
+                    <p>{{ noticia.subtitulo }}</p>
                     <div class="rodapePost">
                         <div class="rodapeLeft">
                             <img src="../../static/img/blog/Icons/Coração.png" alt="imagem Coração">
                             <p>{{ noticia.data_publicacao|date }}</p>
                         </div>
-                        <a href="#">Ler mais</a>
+                        <a href="{% url 'blog_post_individual' noticia.id %}">Ler mais</a>
                     </div>
                 </div>
             </div>
@@ -59,8 +57,6 @@
         <button class="btnCarregarMais">Carregar Mais</button>
     </div>
 
-<!-- FOOTER -->
-{% include 'partials/_footer.html' %}
-<!-- FIM FOOTER -->
+    {% include 'partials/_footer.html' %}
 </body>
 </html>
