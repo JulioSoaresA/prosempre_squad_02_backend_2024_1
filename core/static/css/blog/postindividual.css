@@ -21,16 +21,17 @@ object-fit: cover;
 }
 
 .headline{
-    width: 778px;
+    width: 1137px;
     height: 108px;
     top: 460px;
     margin-left: 152px;
     gap: 0px;
     opacity: 0px;
+    margin-bottom: 50px;
 }
 
 .titulo{
-    width: 778px;
+    width: 1137px;
     height: 72px;
     top: 460px;
     gap: 0px;
@@ -122,8 +123,7 @@ object-fit: cover;
 .dynamic-content {
     width: 1117px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 152px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -147,12 +147,6 @@ object-fit: cover;
     gap: 30px;
 }
 
-.secondparagrafo {
-    flex: 1;
-    padding: 15px;
-    border-radius: 20px;
-}
-
 .imgmeiodotexto {
     width: 384px; /* adjusted width */
     height: 224px; /* adjusted height */
@@ -165,11 +159,9 @@ object-fit: cover;
     font-weight: 700;
     text-align: left;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1200px) {}
 
-}
-
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
 
 
     .banner{
@@ -212,7 +204,7 @@ object-fit: cover;
         font-weight: 600;
         line-height: 25px;
         text-align: left;
-        color: black 
+        color: black;
 
 
     }
