@@ -1,15 +1,38 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
-
-{% include 'partials/_menu.html' %}
-{% include 'partials/_alertas.html' %}
-<section>
-    <h1>Contato</h1>
-    <form action="{% url 'contato' %}" method="POST">
-        {% csrf_token%}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</section>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/contato/contato.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <title>Contato</title>
+</head>
+<body>
+    {% include 'partials/_navbar.html' %}
+    <div class="geral">
+        <div class="leftside">
+            <h1 class="cabeçalho">Fale Conosco</h1>
+            <p class="descricao">Lorem ipsum dolor sit amet. Rem itaque sequi et commodi illo et autem beatae sit quis cumque quo fugiat veniam.</p>
+            <form class="formulario" action="{% url 'contato' %}" method="POST">
+                {% csrf_token%}
+                <select name="assunto" class="assuntoBox">
+                    {% for value, label in form.assunto.field.choices %}}
+                        <option value="{{ value }}">{{ label }}</option>
+                     {% endfor %}
+                </select>
+                <input type="text" class="miniinput" placeholder="Nome" id="inputNome" name="nome"><input type="text" class="miniinput" placeholder="Email" name="email">
+                <input type="text" class="biginput" placeholder="Mensagem" name="mensagem">
+                <button class="enviarBtn" type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="rightside">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.382281546158!2d-74.0048282255402!3d40.73161303641722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25993bf2d3301%3A0xdac8491f98dc8e76!2s23%20Cornelia%20St%2C%20New%20York%2C%20NY%2010014%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1712066389006!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; border-radius: 25px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <label class="endereco">23 Cornelia St, New York, NY 10014, Estados Unidos</label>
+        </div>
+    </div>
+    {% include 'partials/_footer.html' %}
+</body>
+</html>

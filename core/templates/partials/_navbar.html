@@ -1,0 +1,14 @@
+{% load static %}
+<nav class="navbar_">
+    <div class="logo_">
+        <img src="../../static/img/sobre/logo01.png" alt="Logo Mani Cursos">
+    </div>
+    <div class="separator_"></div>
+    <ul class="nav-links_">
+        <li><a href="{% url 'index' %}">HOME</a></li>
+        <li><a href="{% url 'sobre' %}">SOBRE</a></li>
+        <li><a href="{% url 'cursos' %}">CURSOS</a></li>
+        <li><a href="{% url 'blog' %}">BLOG</a></li>
+        <li><a href="{% url 'contato' %}">CONTATO</a></li>
+    </ul>
+</nav>

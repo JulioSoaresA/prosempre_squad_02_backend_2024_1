@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/home/home.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <script src="../../static/js/home/home.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    {% include 'partials/_navbar.html' %}
+    <div class="geral">
+        <div class="firstsectionMobile">
+            <div class="headlineHome">
+                <div class="circle" id="gray"></div>
+                <div class="circle" id="orange1"></div>
+                <div class="circle" id="orange2"></div>
+                <div class="circle" id="bordercircle"></div>
+                <div class="circle" id="gray2"></div>
+                <label class="descricao1">Bem vindo a educação <span class="sublinhado" id="sublinhadooff">Mani</span> de <span class="trocacor">qualidade</span></label>
+                <label class="descricao2">Com a Mani cursos você pode ficar tranquilo, seu futuro está em boas mãos.</label>
+                <div class="explorarCursos">
+                    <a class="btnExplorarCursos" href="{% url 'cursos' %}"><div class="arrowbtn"><label class="arrow">&rarr;</label></div>EXPLORAR CURSOS</a>
+                    <div class="miniaturaAlunos">
+                        <div class="imgAlunos">
+                            <img src="../../static/img/home/botaoexplorarcursos/minialuno1.png" class="miniaturaAluno">
+                            <img src="../../static/img/home/botaoexplorarcursos/minialuno2.png" class="miniaturaAluno2">
+                            <img src="../../static/img/home/botaoexplorarcursos/minialuno3.png" class="miniaturaAluno2">
+                            <div class="somaIcon"><img src="../../static/img/home/icones/soma.png" class="iconesomaImg"></div>
+                        </div>
+                        <label class="alunosAgora">78.926 alunos estudando agora</label>
+                    </div>
+                </div>
+                <div class="circle" id="bordercircle2"></div>
+                <div class="circle" id="orange3"></div>
+            </div>
+            <div class="painelFotosInicial">
+                <div class="fileira" id="fileira1">
+                    <img src="../../static/img/home/painelFotosInicial/banner1.png" class="banner" id="bannerMobile">
+                    <img src="../../static/img/home/painelFotosInicial/banner2.png" class="banner2" id="bannerMobile">
+                    <img src="../../static/img/home/painelFotosInicial/banner3.png" class="banner2" id="bannerMobile2">
+                </div>
+                <div class="fileira" id="fileira2">
+                    <img src="../../static/img/home/painelFotosInicial/banner3.png" class="banner4">
+                    <img src="../../static/img/home/painelFotosInicial/banner4.png" class="banner5">
+                </div>
+                <div class="fileira" id="fileira3">
+                    <img src="../../static/img/home/painelFotosInicial/banner5.png" class="banner6">
+                    <img src="../../static/img/home/painelFotosInicial/banner6.png" class="banner7">
+                </div>
+                <img src="../../static/img/home/icones/bolapontinhos.png" class="bolaPontinhos">
+            </div>
+            <!--Cursos mais populares-->
+            {% if cursos %}
+            <div class="cursosPopulares">
+                <label class="cabeçalho">Cursos mais <span class="sublinhado" id="cabeçalho">populares</span></label>
+                <div class="cards">
+                    <button class="setaCarrossel" id="setaCarrosselEsquerda">&lt;</button>
+                    <button class="setaCarrossel" id="setaCarrosselDireita">&gt;</button>
+                    {% for curso in cursos %}
+                    <!--Card Engenharia da Computação-->
+                    <div class="cardCurso">
+                        <button class="setaCarrosselMobile" id="setaCarrosselMobileEsquerda">&lt;</button>
+                        <div class="cardupper">
+                            <img src="{{ curso.foto.url }}" class="cursosImg">
+                        </div>
+                        <div class="cardlower">
+                            <div class="dadosgerais">
+                                <label class="cursoName" id="cursoName">{{ curso.nome }}</label>
+                                <img src="../../static/img/home/icones/estrela.png" class="estrelaImg">
+                                <label class="notaAvaliação">({{ curso.nota }})</label>
+                            </div>
+                            <label class="dadosCargaHoraria">{{ curso.titulacao }} - {{ curso.carga_horaria }}h semanais -
+                                {{ curso.modalidade }}</label>
+                            <p class="descricaoCurso">{{ curso.descricao }}</p>
+                            <div class="verMais">
+                                <div class="preco">
+                                    <label class="parcelado">{{ curso.parcela_24x }}</label>
+                                    <label class="avista">ou {{ curso.preco_formatado }} à vista</label>
+                                </div>
+                                <button class="verMaisBtn">Ver Mais</button>
+                            </div>
+                        </div>
+                        <button class="setaCarrosselMobile" id="setaCarrosselMobileDireita">&gt;</button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
+            <!--Nossa História-->
+            <div class="nossaHistoriaSection">
+                <div class="carrossel">
+                    <img src="../../static/img/home/nossaHistoria/nossaHistoriaImg.png" class="nossaHistoriaImg" alt="Slide 1">
+                    <img src="../../static/img/home/painelFotosInicial/banner3.png" class="nossaHistoriaImg" alt="Slide 2">
+                    <img src="../../static/img/home/nossaHistoria/carrossel3.png" class="nossaHistoriaImg" alt="Slide 3">
+                    <div class="bolas">
+                        <span class="bolaH"></span>
+                        <span class="bolaH"></span>
+                        <span class="bolaH"></span>
+                    </div>
+                </div>
+                {% if nossa_historia %}
+                  <div class="nossaHistoriaTexto">
+                      <label class="cabeçalho" id="cabeçalhoNossaHistoriaMobile">Nossa <span class="sublinhado" id="cabeçalho">história</span></label>
+                      <p class="nossaHistoriaDescricao">{{ nossa_historia.descricao }}</p>
+                  </div>
+                {% endif %}
+              </div>
+
+            <!--Quem já foi aluno aprova-->
+            {% if alunos %}
+            <div class="quemFoiAlunoAprovaSection">
+                <label class="cabeçalho" id="cabeçalhoQuemfoiAluno">Quem já foi aluno <span class="trocacor" id="spanQuemfoiAlunoaprova">aprova!</span></label>
+                <div class="alunosCardsRow">
+                    <button class="setaCarrosselMobile" id="setaCarrosselMobileEsquerda2">&lt;</button>
+                    {% for aluno in alunos %}
+                    <div class="cardAluno" id="aluno" style="background-image: url({{ aluno.foto.url }});">
+                        <div class="dadosPessoais">
+                            <label class="nomeAluno">{{ aluno.nome }}</label>
+                            <label class="cursoAno">{{ aluno.curso }} ({{ aluno.ano_ingresso }} - {{ aluno.ano_conclusao }})</label>
+                            <label class="descricaoAluno">“{{ aluno.descricao }}”</label>
+                        </div>
+                    </div>
+                    {% if forloop.counter == 2 %}
+                        <button class="setaCarrosselMobile" id="setaCarrosselMobileDireita2">&gt;</button>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% include 'partials/_footer.html' %}
+</body>
+</html>

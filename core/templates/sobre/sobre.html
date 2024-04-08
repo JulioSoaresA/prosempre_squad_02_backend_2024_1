@@ -1,39 +1,81 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block content %}
-
-{% include 'partials/_menu.html' %}
-
-<section class="container text-center mt-2 col-8">
-    <div class="my-2">
-        <h2>Sobre</h2>
-        <h2>{{ nossa_historia.titulo}}</h2>
-        <p>{{ nossa_historia.descricao}}</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/sobre/sobre.css">
+    <link rel="stylesheet" href="../../static/css/navbar.css">
+    <link rel="stylesheet" href="../../static/css/footer.css">
+    <script src="../../static/js/home/home.js" defer></script>
+    <title>Sobre</title>
+</head>
+<body>
+    {% include 'partials/_navbar.html' %}
+    <div class="topicos">
+        <div class="imgtopicos">
+            <img class="ftopicos" src="{{ nossa_historia.foto.url }}" alt="Mulheres rindo sentadas ao redor da mesa">
+        </div>
+        <div class="txttopicos">
+            <h1 class="tittopicos">Nossa <span class="destacada">História</span></h1>
+            <p class="stittopicos">
+                {{ nossa_historia.descricao }}
+            </p>
+        </div>
     </div>
-    <div class="my-2">
-        <h2>{{ nossos_valores.titulo}}</h2>
-        <p>{{ nossos_valores.descricao}}</p>
+
+    <div class="topicos">
+        <div class="txttopicos">
+            <h1 class="tittopicos">Nossos <span class="destacada">Valores</span></h1>
+            <p class="stittopicos">
+                {{ nossos_valores.descricao }}
+            </p>
+        </div>
+        <div class="imgtopicos">
+            <img class="ftopicos" src="{{ nossos_valores.foto.url }}" alt="Pessoas conversando ao redor de uma mesa">
+        </div>
     </div>
-</section>
-<section class="container text-center mt-2 col-8">
-    <div class="my-2"><h2>Nossa equipe</h2></div>
-    <div class="row">
-        <div class="card-group d-flex justify-content-center">
+
+    <div id="principal">
+        <div id="tprincipal">
+            <h1 id="txtprincipal"><span class="destacada">Os melhores</span> professores do mercado </h1>
+        </div>
+        <div id="stprincipal">  
+            <p id="stxtprincipal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sapien, est felis, sagittis viverra nulla mattis scelerisque. Eget 
+            cras integer.</p>
+        </div>
+        <a href="#equipe"><button class="btnNossaEquipe" type="button" href="#equipe">NOSSA EQUIPE
+            <div class="arrowbtn">
+                <label class="arrow">&rarr;</label>
+            </div>
+        </button></a>
+    </div>
+
+    <div class="equipe" id="equipe">
+        <div class="titulo">
+            <h2>Nossa Equipe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Suspendisse sed scelerisque elit. Sed eget tincidunt augue, nec 
+            tempus tellus. Quisque quis felis in felis posuere interdum.</p>
+        </div>
+        <div class="professores">
             {% if equipe %}
             {% for membro in equipe %}
-            <div class="col-3">
-                <div class="card mb-3" style="max-width: 24rem;" >
-                    <img class="card-img-top" src="{{ membro.foto.url }}" width="100" height="250">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ membro.nome }}</h5>
-                        <p class="card-text">{{ membro.titulo }}</p>
-                        <p class="card-text">{{ membro.descricao }}</p>
-                    </div>
+            <div class="membro">
+                <div class="imgperfil">
+                    <div class="perfil" style="background-image: url({{ membro.foto.url }}); background-position: center calc(40%);"></div>
+                </div>
+                <div class="textos">
+                    <h3 class="nome">{{ membro.nome }}</h3>
+                    <p class="formacao">{{ membro.titulo }}</p>
+                    <p class="descricao">{{ membro.descricao }}</p>
                 </div>
             </div>
             {% endfor %}
             {% endif %}
         </div>
     </div>
-</section>
-{% endblock %}
+    {% include 'partials/_footer.html' %}
+</body>
+</html>

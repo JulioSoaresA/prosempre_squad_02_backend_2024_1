@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+/* CABEÇALHO E CAMPO DE BUSCA */
+body{
+    overflow-x: hidden;
+    width: 100vw;
+}
+#pontos{
+    display: none;
+}
+.cabecalho_{
+    background-color: #F97B22;
+    width: 100%;
+    height: 186px;
+    padding: 30px 0 0 0;
+}
+
+.cabecalho_ h1{
+    font-family: 'Montserrat';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 26% 0 26%;
+}
+
+.cabecalho_ p{
+    Height: 42px;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.83px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 35.5% 0 35.5%;
+}
+
+.campoDeBusca{
+    width: 16%;
+    margin: 60px 10% 60px 75%;
+}
+
+.campoDeBusca input{
+    border: 1px solid #262626;
+    padding-left: 20px;
+    border-radius: 90px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.campoDeBusca img{
+    margin-left: -42px;
+}
+
+.campoDeBusca button{
+        visibility: hidden;
+}
+
+/* POSTS */
+.upper{
+    width: 467px;
+    height: 270px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.upper img{
+    width: 467px;
+    height: 270px;
+    border-radius: 20px;
+}
+
+.lower{
+    width: 100%;
+    height: 48%; /* 243/513 */
+}
+
+.lower h3{
+    width: 460px;
+    height: 64px; /* 64/243 */
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a duas linhas */
+    -webkit-box-orient: vertical;
+}
+
+.lower p{
+    width: 100%;
+    height: 40%; /* 72/243 */
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.rodapePost{
+    width: 100%;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.rodapePost img{
+    width: 20px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.rodapePost p{
+    width: 181px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #95A1BB;
+    margin-bottom: 0;
+}
+
+.rodapePost a{
+    width: 67px;
+    height: 20px;
+    font-family: 'DM Sans';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: right;
+    text-decoration: none;
+    color: #262626;
+}
+
+.rodapeLeft{
+    display: flex;
+}
+
+.btnCarregarMais{
+    margin-left: 500px;
+    width: 322px;
+    height: 40px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 90px;
+    border: 1px solid black;
+    color: #787878;
+    background-color: white;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+}
+
+.custom-col {
+  flex: 0 0 auto; /* Impede o crescimento ou encolhimento da coluna */
+}
+
+@media (min-width: 1440px) {
+  .col-lg-6.custom-col {
+      max-width: 467px; /* Largura máxima para as colunas */
+      margin-left: auto; /* Centraliza a coluna */
+      margin-right: auto; /* Centraliza a coluna */
+      margin-bottom: 45px;
+      max-height: 513px; /* Altura máxima para as colunas */
+      flex: 0 0 auto; /* Impede o crescimento ou encolhimento da coluna */
+      padding: 0;
+  }
+}
+
+/* BLOG MOBILE */
+@media only screen and (max-width: 360px) {
+    .col-12.custom-col {
+        max-width: 302px; /* Largura máxima para os itens da coluna */
+        margin-left: auto; /* Centraliza o item da coluna */
+        margin-right: auto; /* Centraliza o item da coluna */
+        margin-bottom: 45px;
+        max-height: 372px; /* Altura máxima para os itens da coluna */
+        flex: 0 0 auto; /* Impede o crescimento ou encolhimento do item da coluna */
+    }
+
+    .cabecalho_{
+        width: 100vw;
+        height: 106px;
+    }
+
+    .cabecalho_ h1{
+        height: 31px;
+        font-family: 'Montserrat';
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 31px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .cabecalho_ p{
+        height: 34px;
+        font-family: 'Montserrat';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: center;
+        margin: 3% 4% 0 4%;
+    }
+
+    .campoDeBusca{
+        margin: 8% 8% 8% 71%;
+        height: 23px;
+        border-radius: 30px;
+        display: flex;
+        border: 1px solid #262626;
+        width: 20%;
+    }
+    .campoDeBusca input{
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+        font-family: 'Montserrat';
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 15px;
+        text-align: left;
+        width: 55px;
+        height: 15px;
+        padding: 4px 10px 4px 10px;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        outline: none;
+    }
+    .campoDeBusca img{
+        width: 12px;
+        height: 12px;
+        z-index: 2;
+        text-align: center;
+        margin: 5px -20px 5px 0;
+    }
+
+    #mobile{
+        display: none;
+    }
+
+    .upper{
+        width: 302px;
+        height: 172px;
+        border-radius: 20px;
+
+    }
+
+    .upper img{
+        width: 100%;
+        height: 172px;
+        border-radius: 20px;
+    }
+
+    .lower{
+        width: 302px;
+        height: 200px;
+        margin-top: 15px;
+    }
+
+    .lower h3{
+        width: 302px;
+        height: 63px;
+        font-family: 'Montserrat';
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+        overflow: hidden;
+        margin-bottom: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limita a duas linhas */
+        -webkit-box-orient: vertical;
+    }
+
+    .lower p{
+        width: 302px;
+        height: 68px;
+        font-family: 'DM Sans';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+
+    .rodapePost{
+        width: 302px;
+        height: 22px;
+    }
+
+    .rodapeLeft{
+        width: 145px;
+        height: 22px;
+
+    }
+
+    .rodapeLeft img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .rodapeLeft p{
+        width: 113px;
+        height: 22px;
+        font-family: 'Montserrat';
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+    }
+
+    .btnCarregarMais {
+        display: none;
+        visibility: hidden;
+    }
+}
